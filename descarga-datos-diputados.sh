@@ -1,4 +1,13 @@
 #!/bin/bash
+#
+#	Author:		Jorge González
+#
+# 	Description:	Script para sacar los datos de redes sociales y de contacto de los diputados del congreso de España.
+#
+#	Version:	0.1
+#
+#	Modifications:	v0.1; first version.
+#
 
 TOTAL_DIPUTADOS=388
 LEGISLATURA="XIV"
@@ -9,7 +18,7 @@ rm "${FICHERO}" 2>/dev/null
 echo "ID_DIPUTADO;NOMBRE;PROVINCIA;GRUPO;TWITTER;FACEBOOK;CORREO" >> "${FICHERO}"
 
 for ID_DIPUTADO in $(seq 1 ${TOTAL_DIPUTADOS}); do
-	#Limpiar variables que puede que noexistan
+	#Limpiar variables que puede que no existan
 	TWITTER=""
 	FACEBOOK=""
 	CORREO=""
