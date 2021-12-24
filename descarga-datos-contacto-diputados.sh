@@ -55,3 +55,6 @@ while [[ "${DIPUTADO_EXISTENTE}" != 1 ]]; do
 	# Incrementar ID_DIPUTADO
 	let ID_DIPUTADO=${ID_DIPUTADO}+1
 done
+
+# Eliminar la ultima linea del archivo
+sed -i '$d' ${FICHERO}
